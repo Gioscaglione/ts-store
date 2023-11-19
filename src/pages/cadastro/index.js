@@ -8,12 +8,6 @@ const navigation = useNavigation()
  const [password, setPassword] = useState('');
  const [nome, setNome] = useState('');
 
- const handleLogin = () => {
-    // handle login logic here
-    console.log('Logged in with email:', email);
-    console.log('Logged in with password:', password);
- };
-
  return (
     <View style={styles.container}>
       <ImageBackground source={require('../../assets/images/bg.jpg')} resizeMode="cover" style={styles.imageBg}>
@@ -40,7 +34,7 @@ const navigation = useNavigation()
             placeholder="Confirmar senha"
             secureTextEntry
           />
-          <TouchableOpacity style={styles.button} onPress={handleLogin}>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('produtos')}>
             <Text style={styles.buttonText}>Ready for it!</Text>
           </TouchableOpacity>
 

@@ -30,20 +30,28 @@ const navigation = useNavigation()
 
    {/* produtos */}
     <View style={styles.produtos}>
+    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('moletom')}>
       <Image style={styles.esq} source={require('../../assets/images/moletom.png')}/>
-      <Image style={styles.dir} source={require('../../assets/images/cd.png')}/>
+    </TouchableOpacity>
+    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('disco')}>
+      <Image style={styles.dir} source={require('../../assets/images/disco.png')}/>
+      </TouchableOpacity>
     </View>
 
    {/* descricao produtos */}
     <View style={styles.descricao}>
-      <Text style={styles.descricaoM}>Moletom Midnights{'\n'}R$150,00</Text>
-      <Text style={styles.descricaoC}>CD 1989 (Taylor's Version){'\n'}R$30,00</Text>
+      <Text style={styles.descricaoM}>Moletom Reputation{'\n'}R$150,00</Text>
+      <Text style={styles.descricaoC}>Disco 1989 T.V{'\n'}R$35,00</Text>
     </View>
 
     {/* produtos */}
     <View style={styles.produtos}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('camiseta')}>
       <Image  source={require('../../assets/images/camiseta-fearless.png')}/>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('palhetas')}>
       <Image style={styles.eras} source={require('../../assets/images/palhetas.png')}/>
+      </TouchableOpacity>
     </View>
 
    {/* descricao produtos */}
@@ -71,7 +79,7 @@ const styles = StyleSheet.create({
       fontSize: 16 
     },
     descricaoC:{
-      marginRight: 20,
+      marginRight: 70,
       fontSize: 16
     },
     descricaoCF:{
@@ -99,45 +107,46 @@ const styles = StyleSheet.create({
       width: 25,
       resizeMode : 'stretch',
     },
- destaque:{
-   width: 399,
-   height: 147,
-   alignSelf: 'center',
-   marginTop: 13,
-   borderRadius: 4
- },
- top:{
-   width: 244,
-   height: 90,
-   alignSelf: 'center',
-   marginTop: 30,
- },
- text:{
-   fontSize: 24,
-   marginLeft: 13,
-   marginTop: 12
- },
-  input: {
-    borderWidth: 1,
-    borderColor: 'black',
-    borderRadius: 5,
-    padding: 10,
-    width: 358,
-    height: 36,
-    marginLeft: 13,
-    backgroundColor: '#fff',
-    flex: 1
-},
- item: {
-    padding: 10,
-    marginVertical: 8,
- },
- title: {
-    fontSize: 17,
- },
- price: {
-    fontSize: 15,
-    color: 'gray',
+   destaque:{
+      width: 399,
+      height: 147,
+      alignSelf: 'center',
+      marginTop: 13,
+      borderRadius: 4
+   },
+   top:{
+      width: 244,
+      height: 90,
+      alignSelf: 'center',
+      marginTop: 30,
+   },
+   text:{
+      fontSize: 24,
+      marginLeft: 13,
+      marginTop: 12,
+      marginBottom: 12
+   },
+   input: {
+      borderWidth: 1,
+      borderColor: 'black',
+      borderRadius: 5,
+      padding: 10,
+      width: 358,
+      height: 36,
+      marginLeft: 13,
+      backgroundColor: '#fff',
+      flex: 1
+   },
+   item: {
+      padding: 10,
+      marginVertical: 8,
+   },
+   title: {
+      fontSize: 17,
+   },
+   price: {
+      fontSize: 15,
+      color: 'gray',
  },
 });
 
