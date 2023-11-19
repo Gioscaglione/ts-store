@@ -22,7 +22,10 @@ export default function Routes(){
             <Stack.Screen
                 name="produtos"
                 component={ProductsScreen}
-                options={{ headerShown: false }}
+                options={{ headerShown: false, 
+                            contentStyle:{
+                            backgroundColor:'#ECE5E5'
+                        }}}
             />
         </Stack.Navigator>
     )
