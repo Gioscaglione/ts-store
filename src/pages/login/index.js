@@ -2,17 +2,46 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, ImageBackground, Image, SafeAreaView } from 'react-native';
 import { useNavigation} from '@react-navigation/native'
 
+
+
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { initializeApp } from 'firebase/auth';
+import { firebaseConfig } from '../../../firebase.config'
+import firebase from 'firebase/app';
+
+
+
 const Login = () => {
 const navigation = useNavigation()
 
- const [email, setEmail] = useState('');
- const [password, setPassword] = useState('');
+ const [email, setEmail] = React.useState('');
+ const [password, setPassword] = React.useState('');
 
- const handleLogin = () => {
-    // handle login logic here
-    console.log('Logged in with email:', email);
-    console.log('Logged in with password:', password);
- };
+//  const app = initializeApp(firebaseConfig);
+//  const auth = getAuth(app);
+
+//  const handleCreateAccount = () => {
+//    createUserWithEmailAndPassword(auth, email, password)
+//    .then(() => {console.log('conta criada')
+//                const user = userCredential.user;
+//                console.log(user)
+//                })
+//                .catch(error => {
+//                   console.log(error)
+//                })
+//  };
+
+//  const handleSingIn = () => {
+//    signInWithEmailAndPassword(auth, email, password)
+//    .then(() => {
+//       console.log('Logado')
+//       const user = userCredential.user;
+//       console.log(user)
+//    })
+//    .catch(error => {
+//       console.log(error)
+//    })
+//  }
 
  return (
     <View style={styles.container}>
@@ -23,12 +52,12 @@ const navigation = useNavigation()
             style={styles.input}
             placeholder="Email"
             value={email}
-            onChangeText={setEmail}
+            onChangeText={(text) => setEmail(text)}
           />
           <TextInput style={styles.input}
             placeholder="Senha"
             value={password}
-            onChangeText={setPassword}
+            onChangeText={(text) => setPassword(text)}
             secureTextEntry
           />
           <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('produtos')}>

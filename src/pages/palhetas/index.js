@@ -31,7 +31,7 @@ const navigation = useNavigation()
                 <View>
                     <Image style={styles.produto}  source={require('../../assets/images/the-eras.jpg')}/>
                     <Text style={styles.descricao}>Palhetas de violão The Eras Tour</Text>
-                    <Text style={styles.preco}>{'\n'}R$200,00</Text>
+                    <Text style={styles.preco}>{'\n'}R$20,00</Text>
                 </View>
 
                 {/* botao favoritar */}
